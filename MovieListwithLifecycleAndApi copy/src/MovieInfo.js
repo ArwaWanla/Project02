@@ -19,7 +19,7 @@ constructor(){
 		const SerachButton = (e) => {
 			e.preventDefault();
 			console.log(this.state.query)
-		   axios.get(`https://api.themoviedb.org/3/search/movie?api_key=b2d6e4e0261278564a0580683edec388&query=${this.state.query}`).
+		   axios.get(`https://api.themoviedb.org/3/search/movie?{your key}&query=${this.state.query}`).
 		   then( (res) => { 
 			this.setState({movies: res.data.results}); 
 			  // setRecipes(res.data.hits)
